@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:library_app/pages/myBottomNavigationBar.dart';
 
 class Dashboard extends StatelessWidget{
   @override
@@ -30,7 +31,6 @@ class Dashboard extends StatelessWidget{
                       height: 100,
                     ),
                     // Image
-
                     SizedBox(height: 20,),
 
                     SizedBox(
@@ -55,7 +55,7 @@ class Dashboard extends StatelessWidget{
                 ),
               ),
 
-              
+
             ),
             // Partie au dessus
 
@@ -75,10 +75,134 @@ class Dashboard extends StatelessWidget{
                 )
               ),
             ),
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: 20,vertical: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Container(
+                    height: 130,
+                    width: 145,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(8),
+                        boxShadow: const [
+                          BoxShadow(
+                              color: Color.fromRGBO(0, 0, 0, 0.2),
+                              spreadRadius: 5,
+                              blurRadius: 15,
+                              offset: Offset(0, 4)
+                          )
+                        ]
+                    ),
+                    child: const Center(
+                      child: Icon(Icons.school,size: 80,),
+                    ),
+                  ),
+                  Container(
+                    height: 130,
+                    width: 145,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(8),
+                        boxShadow: const [
+                          BoxShadow(
+                              color: Color.fromRGBO(0, 0, 0, 0.2),
+                              spreadRadius: 5,
+                              blurRadius: 15,
+                              offset: Offset(0, 4)
+                          )
+                        ]
+                    ),
+                    child: const Center(
+                      child: Icon(Icons.favorite,size: 80,),
+                    ),
+                  ),
+                  Container(
+                    height: 130,
+                    width: 145,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(8),
+                      boxShadow: const [
+                        BoxShadow(
+                          color: Color.fromRGBO(0, 0, 0, 0.2),
+                          spreadRadius: 5,
+                          blurRadius: 15,
+                          offset: Offset(0, 4)
+                        )
+                      ]
+                    ),
+                    child: const Center(
+                      child: Icon(Icons.face,size: 80,),
+                    ),
+                  )
+                ],
+              ),
+            ),
 
+            SizedBox(height: 40,),
+
+            Container(
+
+              height: 30,
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              child: const Center(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text("LIVRES",style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold,fontFamily: 'Helvetica'),),
+                      Text("Plus",style: TextStyle(fontSize: 20,color: Colors.blue),),
+                    ],
+                  )
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.symmetric(vertical: 20,horizontal: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Container(
+                    height: 210,
+                    width: 145,
+
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8)
+                    ),
+                    child: Image.asset(
+                      "/home/exauce/Mobile/library_app/assets/images/img_3.png",
+                    ),
+                  ),
+                  Container(
+                    height: 210,
+                    width: 145,
+                    
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    child: Image.asset(
+                      "/home/exauce/Mobile/library_app/assets/images/img_4.png"
+                    ),
+                  ),
+                  Container(
+                    height: 210,
+                    width: 145,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8)
+                    ),
+                    child: Image.asset(
+                      "/home/exauce/Mobile/library_app/assets/images/img_5.png",
+                      height: 100,
+                    ),
+                  ),
+                ],
+              ),
+            )
           ],
         ),
       ),
+      bottomNavigationBar: MyBottomNavigationBar(),
     );
   }
 
